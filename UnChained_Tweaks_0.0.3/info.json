@@ -1,0 +1,27 @@
+{
+  "name": "UnChained_Tweaks",
+  "version": "0.0.3",
+  "factorio_version": "0.14",
+  "title": "UnChained - Tweaks",
+  "author": "ShadowScaleFTL",
+  "contact": "",
+  "homepage": "",
+  "description": "Adds tweaks for some mods, change recipes, techs. Additional balance for marathon and bob's extended. More integration for mods.",
+  "dependencies": [
+    "base >= 0.14.0",
+    "angelsaddons-warehouses >= 0.1.3",
+    "boblibrary >= 0.14.3",
+    "VersepellesHardStorage >= 2.0.0",
+    "BobExtended >= 0.14.26",
+	"? Bio_Industries >= 1.4.8",
+	"? bobgreenhouse >= 0.14.0",
+	"? RailTanker >= 1.4.0",
+	"? angelsaddons-pressuretanks >= 0.1.1",
+    "? AsphaltRoads >= 1.0.2",
+    "angelslogistics >= 0.1.1",
+    "boblogistics >= 0.14.5",
+    "bobplates >= 0.14.0",
+    "angelsrefining >=0.6.5",
+	"More_Floors >=1.1.0"
+    ]
+}
