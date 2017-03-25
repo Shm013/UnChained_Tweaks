@@ -29,6 +29,12 @@ if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wa
 if data.raw["car"]["car"] then data.raw["car"]["car"].inventory_size = car_and_tank_size end
 if data.raw["car"]["tank"] then data.raw["car"]["tank"].inventory_size = car_and_tank_size end
 
+-- Bob Cargo wagon tweaks
+
+if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wagon"].inventory_size = cargo_wagon_size end
+if data.raw["cargo-wagon"]["bob-cargo-wagon-2"] then data.raw["cargo-wagon"]["bob-cargo-wagon-2"].inventory_size = cargo_wagon_size_MK2 end
+if data.raw["cargo-wagon"]["bob-cargo-wagon-3"] then data.raw["cargo-wagon"]["bob-cargo-wagon-3"].inventory_size = cargo_wagon_size_MK3 end
+
 -- Angels warehouses tweaks
 
 if data.raw["container"]["angels-warehouse"] then data.raw["container"]["angels-warehouse"].inventory_size = warehouse_size_MK01 end

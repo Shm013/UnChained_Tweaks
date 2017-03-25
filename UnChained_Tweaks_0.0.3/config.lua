@@ -44,4 +44,8 @@ warehouse_tech_bonus_6		= 20
 -- own iron crate
 iron_crate_size				= 40
 
+-- Cargo wagon tweaks
+cargo_wagon_size     		= 16 -- 16 in vanilla
+cargo_wagon_size_MK2 		= 32 -- 60 in bob
+cargo_wagon_size_MK3 		= 64 -- 80 in bob
 
