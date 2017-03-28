@@ -1,19 +1,18 @@
 require("config")
 
-data:extend(
-{
+data:extend({
 	{
 		type = "technology",
 		name = "warehouse-MK-2",
 		icon = Mod_Name .. "/graphics/technology/warehouse_tech_bonus.png",
 		icon_size = 128,
-        subgroup = "angels-warehouses",
+		subgroup = "angels-warehouses",
 		upgrade = "true",
 		effects =
 		{
 			{
-                type = "unlock-recipe",
-                recipe = "warehouse-MK02"
+				type = "unlock-recipe",
+				recipe = "warehouse-MK02"
 			},
 		},
 		prerequisites = {"angels-warehouses"},
@@ -222,5 +221,4 @@ data:extend(
 		},
 	},    	
     order = "c-b"  
-
 })
