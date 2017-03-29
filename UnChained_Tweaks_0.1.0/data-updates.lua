@@ -1,10 +1,13 @@
-require("config")
 
 require ("libs.legacy") -- From Bob's Libary 
 require ("libs.item-functions") -- From Bob's Libary 
 require ("libs.recipe-functions") -- From Bob's Libary 
 require ("libs.technology-functions") -- From Bob's Libary 
 require ("libs.functions") -- From Bob's Libary 
+
+
+
+require("config")
 
 if data.raw["player"]["player"].inventory_size ~= unchained_inventory_size then data.raw["player"]["player"].inventory_size = unchained_inventory_size end
 
@@ -26,17 +29,69 @@ if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wa
 if data.raw["car"]["car"] then data.raw["car"]["car"].inventory_size = car_and_tank_size end
 if data.raw["car"]["tank"] then data.raw["car"]["tank"].inventory_size = car_and_tank_size end
 
--- Bob Cargo wagon tweaks
+-- random
 
-if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wagon"].inventory_size = cargo_wagon_size end
-if data.raw["cargo-wagon"]["bob-cargo-wagon-2"] then data.raw["cargo-wagon"]["bob-cargo-wagon-2"].inventory_size = cargo_wagon_size_MK2 end
-if data.raw["cargo-wagon"]["bob-cargo-wagon-3"] then data.raw["cargo-wagon"]["bob-cargo-wagon-3"].inventory_size = cargo_wagon_size_MK3 end
+if data.raw["car"]["car"] then data.raw["car"]["car"].equipment_grid = "UT-car" end
+data.raw.recipe["coal-burner"].enabled = false
+
+UTweaks.resort("item", "steam-engine", "bob-energy-boiler", "b-b")
+UTweaks.resort("item", "steam-engine-2", "bob-energy-boiler", "b-b")
+UTweaks.resort("item", "steam-engine-3", "bob-energy-boiler", "b-b")
+
+
+UTweaks.remove_ingredient("crawler-bot-wagon", "electronic-circuit")
+UTweaks.addtorecipe("crawler-bot-wagon", {{"electronic-circuit", 120}})
+
+UTweaks.remove_ingredient("solar-panel", "copper-plate")
+UTweaks.addtorecipe("solar-panel", {{"silicon-wafer", 14}})
+
+UTweaks.remove_ingredient("solar-panel-small", "copper-plate")
+UTweaks.addtorecipe("solar-panel-small", {{"silicon-wafer", 7}})
+
+UTweaks.remove_ingredient("solar-panel-large", "copper-plate")
+UTweaks.addtorecipe("solar-panel-large", {{"silicon-wafer", 28}})
+
+UTweaks.addtorecipe("vehicle-solar-panel-1", {{"silicon-wafer", 14}})
+UTweaks.addtorecipe("solar-panel-equipment", {{"silicon-wafer", 4}})
+
+if data.raw["item-subgroup"]["vehicle-equipment"] then data.raw["item-subgroup"]["vehicle-equipment"].group = "UT-transport-system" end
+if data.raw["item-subgroup"]["bob-ammo-parts"] then data.raw["item-subgroup"]["bob-ammo-parts"].group = "combat" end
+if data.raw["item-subgroup"]["bob-ammo-parts"] then data.raw["item-subgroup"]["bob-ammo-parts"].order = "f-c-a" end
+if data.raw["item-subgroup"]["bob-ammo"] then data.raw["item-subgroup"]["bob-ammo"].group = "combat" end
+if data.raw["item-subgroup"]["bob-ammo"] then data.raw["item-subgroup"]["bob-ammo"].order = "f-c-b" end
+
+
+--if data.raw["item-subgroup"]["Arci-asphalt"] then data.raw["item-subgroup"]["Arci-asphalt"].order = "b-c-a" end
+
+-- some fluids
+--UTweaks.resort("recipe", "hot-steam", "UT-fluids", "a-a")
+-- data.raw.item["hot-steam"].subgroup = "UT-fluids"
+-- data.raw.item["hot-steam"].order = "a-a"
+-- data.raw.item["bi-Fuel_Conversion"].subgroup = "UT-fluids"
+-- data.raw.item["bi-Fuel_Conversion"].order = "a-b"
+-- data.raw.item["advanced-caustic-oil-processing"].subgroup = "UT-fluids"
+-- data.raw.item["advanced-caustic-oil-processing"].order = "a-c"
+-- data.raw.item["caustic-heavy-oil-processing"].subgroup = "UT-fluids"
+-- data.raw.item["caustic-heavy-oil-processing"].order = "a-d"
+-- data.raw.item["caustic-oil-processing"].subgroup = "UT-fluids"
+-- data.raw.item["caustic-oil-processing"].order = "a-e"
+-- data.raw.item["bi-Bio_Fuel"].subgroup = "UT-fluids"
+-- data.raw.item["bi-Bio_Fuel"].order = "a-f"
+-- data.raw.item["bi-biomass"].subgroup = "UT-fluids"
+-- data.raw.item["bi-biomass"].order = "a-g"
+-- data.raw.item["bi-liquid-co2"].subgroup = "UT-fluids"
+-- data.raw.item["bi-liquid-co2"].order = "a-h"
+-- data.raw.item["fuel-cell"].subgroup = "UT-fluids"
+-- data.raw.item["fuel-cell"].order = "a-i"
+
 
 -- Angels warehouses tweaks
 
 if data.raw["container"]["angels-warehouse"] then data.raw["container"]["angels-warehouse"].inventory_size = warehouse_size_MK01 end
-if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].subgroup = "UT-repositories" end
-if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].order = "a" end
+UTweaks.resort("recipe", "angels-warehouse", "UT-repositories", "a")
+
+-- if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].subgroup = "UT-repositories" end
+-- if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].order = "a" end
 -- data.raw["container"]["angels-warehouse"].name = warehouse_MK01
 -- data.raw["recipe"]["angels-warehouse"].name = warehouse_MK01
 
@@ -45,7 +100,7 @@ data.raw.technology["angels-logistic-warehouses"].enabled = false
 
 -- Angels logistics tweaks
 
-if data.raw["car"]["angels-crawler"] then data.raw["car"]["angels-crawler"].inventory_size = 256 end
+if data.raw["car"]["angels-crawler"] then data.raw["car"]["angels-crawler"].inventory_size = 128 end
 
 -- Angels Components
 data.raw.item["angels-burner-generator-vequip"].subgroup = "UT-vehicle-modules"
@@ -130,6 +185,7 @@ data.raw.recipe["bi-Logs_Mk3"].order = "a[wood-3]-c"
 data.raw.recipe["bi-seedling"].subgroup = "UT-wood-and-seeding"
 data.raw.recipe["bi-seedling"].order = "b[seedling]-a"
 
+data.raw.recipe["bi-wooden-fence"].fuel_value = "2MJ"
 -- Bob greenhouse tweaks
 
 data.raw.recipe["bob-seedling"].subgroup = "UT-wood-and-seeding"
@@ -234,11 +290,3 @@ data.raw.item["landfill"].order = "d"
 
 data.raw.item["offshore-pump"].subgroup = util.table.deepcopy(data.raw["item"]["small-pump"].subgroup)
 -- data.raw.item["offshore-pump"].order = "b[pipe]-c[small-pump]"
-
-
--- Small lamp fix (6 basic-circuit-board Is added by bob Extended)
-data.raw.recipe["small-lamp"].ingredients =
-{
-	{"iron-stick", 3},
-	{"iron-plate", 2},
-}
