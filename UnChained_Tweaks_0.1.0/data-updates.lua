@@ -1,13 +1,10 @@
+require("config")
 
 require ("libs.legacy") -- From Bob's Libary 
 require ("libs.item-functions") -- From Bob's Libary 
 require ("libs.recipe-functions") -- From Bob's Libary 
 require ("libs.technology-functions") -- From Bob's Libary 
 require ("libs.functions") -- From Bob's Libary 
-
-
-
-require("config")
 
 if data.raw["player"]["player"].inventory_size ~= unchained_inventory_size then data.raw["player"]["player"].inventory_size = unchained_inventory_size end
 
@@ -237,3 +234,11 @@ data.raw.item["landfill"].order = "d"
 
 data.raw.item["offshore-pump"].subgroup = util.table.deepcopy(data.raw["item"]["small-pump"].subgroup)
 -- data.raw.item["offshore-pump"].order = "b[pipe]-c[small-pump]"
+
+
+-- Small lamp fix (6 basic-circuit-board Is added by bob Extended)
+data.raw.recipe["small-lamp"].ingredients =
+{
+	{"iron-stick", 3},
+	{"iron-plate", 2},
+}

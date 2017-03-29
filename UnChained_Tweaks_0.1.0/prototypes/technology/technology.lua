@@ -220,5 +220,5 @@ data:extend({
 			time = 60
 		},
 	},    	
-    order = "c-b"  
+    order = "c-b"
 })

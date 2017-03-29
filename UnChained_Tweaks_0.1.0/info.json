@@ -1,9 +1,9 @@
 {
   "name": "UnChained_Tweaks",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "factorio_version": "0.14",
   "title": "UnChained - Tweaks",
-  "author": "ShadowScaleFTL",
+  "author": "ShadowScaleFTL, Nikolay Shamanovich (Shm13)",
   "contact": "",
   "homepage": "",
   "description": "Adds tweaks for some mods, change recipes, techs. Additional balance for marathon and bob's extended. More integration for mods.",
