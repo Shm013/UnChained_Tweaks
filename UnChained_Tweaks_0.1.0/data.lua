@@ -9,7 +9,7 @@ categories = {
 	"category"
 	}
 recipes = {
-	"recipe"
+	"recipe", "storage"
 	}
 technologies = {
 	"technology"

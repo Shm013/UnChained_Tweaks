@@ -31,7 +31,7 @@ data:extend({
 		icon_size = 64,
 		icon = util.table.deepcopy(data.raw["item-group"]["angels-enhancement"].icon),
 	},
-    {
+		{
 		type = "item-subgroup",
 		name = "UT-vehicle-modules",
 		group = "UT-transport-system",
@@ -72,5 +72,17 @@ data:extend({
 		name = "UT-floors",
 		group = "more-floors",
 		order = "a-b",
-    },   
-})
+    },  
+    {
+		type = "item-subgroup",
+		name = "UT-fluids",
+		group = "bob-fluid-products",
+		order = "a-b",
+    },  
+    {
+		type = "item-subgroup",
+		name = "UT-battery-engine-stick",
+		group = "bob-fluid-products",
+		order = "a-c",
+    },	
+ })
