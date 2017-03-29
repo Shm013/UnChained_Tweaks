@@ -42,4 +42,9 @@ warehouse_size_MK12        = 600
 cargo_wagon_size     		= 16 -- 40 in vanila
 cargo_wagon_size_MK2 		= 32 -- 60 in bob
 cargo_wagon_size_MK3 		= 64 -- 80 in bob
+
+
+crawler_size                = 50 -- 768 in angel
+crawler_wagon_size          = 46 -- 64 in angel
+crawler_bot_wagon_size      = 36 -- 128 in angel
 --}}

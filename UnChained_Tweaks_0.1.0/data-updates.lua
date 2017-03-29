@@ -8,7 +8,7 @@ require ("libs.functions") -- From Bob's Libary
 
 if data.raw["player"]["player"].inventory_size ~= unchained_inventory_size then data.raw["player"]["player"].inventory_size = unchained_inventory_size end
 
--- HardStorage tweaks
+--{{ Storage tweaks
 
 if data.raw["container"]["wooden-chest"] then data.raw["container"]["wooden-chest"].inventory_size = wooden_chest_size end
 if data.raw["container"]["iron-chest"] then data.raw["container"]["iron-chest"].inventory_size = iron_chest_size end
@@ -22,9 +22,17 @@ if data.raw["recipe"]["basic-repository"] then data.raw["recipe"]["basic-reposit
 if data.raw["logistic-container"]["logistic-chest-passive-provider"] then data.raw["logistic-container"]["logistic-chest-passive-provider"].inventory_size = logistic_chest_size end
 if data.raw["logistic-container"]["logistic-chest-storage"] then data.raw["logistic-container"]["logistic-chest-storage"].inventory_size = logistic_chest_size end
 if data.raw["logistic-container"]["logistic-chest-requester"] then data.raw["logistic-container"]["logistic-chest-requester"].inventory_size = logistic_chest_size end
-if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wagon"].inventory_size = cargo_wagon_size end
 if data.raw["car"]["car"] then data.raw["car"]["car"].inventory_size = car_and_tank_size end
 if data.raw["car"]["tank"] then data.raw["car"]["tank"].inventory_size = car_and_tank_size end
+
+if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wagon"].inventory_size = cargo_wagon_size end
+if data.raw["cargo-wagon"]["bob-cargo-wagon-2"] then data.raw["cargo-wagon"]["bob-cargo-wagon-2"].inventory_size = cargo_wagon_size_MK2 end
+if data.raw["cargo-wagon"]["bob-cargo-wagon-3"] then data.raw["cargo-wagon"]["bob-cargo-wagon-3"].inventory_size = cargo_wagon_size_MK3 end
+
+if data.raw["car"]["angels-crawler"] then data.raw["car"]["angels-crawler"].inventory_size = crawler_size end
+if data.raw["cargo-wagon"]["crawler-wagon"] then data.raw["cargo-wagon"]["crawler-wagon"].inventory_size = crawler_wagon_size  end
+if data.raw["cargo-wagon"]["crawler-bot-wagon"] then data.raw["cargo-wagon"]["crawler-bot-wagon"].inventory_size = crawler_bot_wagon_size end
+-- }}
 
 -- random
 
@@ -34,22 +42,6 @@ data.raw.recipe["coal-burner"].enabled = false
 UTweaks.resort("item", "steam-engine", "bob-energy-boiler", "b-b")
 UTweaks.resort("item", "steam-engine-2", "bob-energy-boiler", "b-b")
 UTweaks.resort("item", "steam-engine-3", "bob-energy-boiler", "b-b")
-
-
-UTweaks.remove_ingredient("crawler-bot-wagon", "electronic-circuit")
-UTweaks.addtorecipe("crawler-bot-wagon", {{"electronic-circuit", 120}})
-
-UTweaks.remove_ingredient("solar-panel", "copper-plate")
-UTweaks.addtorecipe("solar-panel", {{"silicon-wafer", 14}})
-
-UTweaks.remove_ingredient("solar-panel-small", "copper-plate")
-UTweaks.addtorecipe("solar-panel-small", {{"silicon-wafer", 7}})
-
-UTweaks.remove_ingredient("solar-panel-large", "copper-plate")
-UTweaks.addtorecipe("solar-panel-large", {{"silicon-wafer", 28}})
-
-UTweaks.addtorecipe("vehicle-solar-panel-1", {{"silicon-wafer", 14}})
-UTweaks.addtorecipe("solar-panel-equipment", {{"silicon-wafer", 4}})
 
 if data.raw["item-subgroup"]["vehicle-equipment"] then data.raw["item-subgroup"]["vehicle-equipment"].group = "UT-transport-system" end
 if data.raw["item-subgroup"]["bob-ammo-parts"] then data.raw["item-subgroup"]["bob-ammo-parts"].group = "combat" end
@@ -81,14 +73,6 @@ if data.raw["item-subgroup"]["bob-ammo"] then data.raw["item-subgroup"]["bob-amm
 -- data.raw.item["fuel-cell"].subgroup = "UT-fluids"
 -- data.raw.item["fuel-cell"].order = "a-i"
 
---{{ Cargo Wagons:
-
-if data.raw["cargo-wagon"]["cargo-wagon"] then data.raw["cargo-wagon"]["cargo-wagon"].inventory_size = cargo_wagon_size end
-if data.raw["cargo-wagon"]["bob-cargo-wagon-2"] then data.raw["cargo-wagon"]["bob-cargo-wagon-2"].inventory_size = cargo_wagon_size_MK2 end
-if data.raw["cargo-wagon"]["bob-cargo-wagon-3"] then data.raw["cargo-wagon"]["bob-cargo-wagon-3"].inventory_size = cargo_wagon_size_MK3 end
-
--- }}
-
 -- Angels warehouses tweaks
 
 if data.raw["container"]["angels-warehouse"] then data.raw["container"]["angels-warehouse"].inventory_size = warehouse_size_MK01 end
@@ -100,11 +84,6 @@ UTweaks.resort("recipe", "angels-warehouse", "UT-repositories", "a")
 -- data.raw["recipe"]["angels-warehouse"].name = warehouse_MK01
 
 data.raw.technology["angels-logistic-warehouses"].enabled = false
-
-
--- Angels logistics tweaks
-
-if data.raw["car"]["angels-crawler"] then data.raw["car"]["angels-crawler"].inventory_size = 128 end
 
 -- Angels Components
 data.raw.item["angels-burner-generator-vequip"].subgroup = "UT-vehicle-modules"
@@ -173,8 +152,6 @@ data.raw.item["underflow-valve"].order = "d-b"
 
 UTweaks.TechRemoveRecipeUnlock("fluid-handling", "check-valve")
 data.raw.item["check-valve"].enabled = false
-
-
 
 -- Bio Industries tweaks 
 UTweaks.TechRemoveRecipeUnlock("advanced-material-processing", "bi-steel-furnace-disassemble")
@@ -294,11 +271,3 @@ data.raw.item["landfill"].order = "d"
 
 data.raw.item["offshore-pump"].subgroup = util.table.deepcopy(data.raw["item"]["small-pump"].subgroup)
 -- data.raw.item["offshore-pump"].order = "b[pipe]-c[small-pump]"
-
-
--- Small lamp fix (6 basic-circuit-board Is added by bob Extended)
-data.raw.recipe["small-lamp"].ingredients =
-{
-	{"iron-stick", 3},
-	{"iron-plate", 2},
-}
