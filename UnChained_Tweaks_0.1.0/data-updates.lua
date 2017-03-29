@@ -34,6 +34,12 @@ if data.raw["cargo-wagon"]["crawler-wagon"] then data.raw["cargo-wagon"]["crawle
 if data.raw["cargo-wagon"]["crawler-bot-wagon"] then data.raw["cargo-wagon"]["crawler-bot-wagon"].inventory_size = crawler_bot_wagon_size end
 -- }}
 
+--{{ Energy capacity tweaks
+
+if data.raw["item"]["fuel-cell"] then data.raw["item"]["fuel-cell"].fuel_value = fuel_cell_energy_value end
+
+--}}
+
 -- random
 
 if data.raw["car"]["car"] then data.raw["car"]["car"].equipment_grid = "UT-car" end

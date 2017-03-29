@@ -48,3 +48,9 @@ crawler_size                = 50 -- 768 in angel
 crawler_wagon_size          = 46 -- 64 in angel
 crawler_bot_wagon_size      = 36 -- 128 in angel
 --}}
+
+--{{ Energy capacity
+
+fuel_cell_energy_value = "2MJ" -- "45MJ" in usefulbyproducts
+
+--}}
