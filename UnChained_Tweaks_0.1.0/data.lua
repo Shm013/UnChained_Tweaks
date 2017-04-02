@@ -1,15 +1,15 @@
 --{{ List of prototypes here: 
 entities = {
-	"storage"
+	"storage", "lamp"
 	}
 items = {
-	"storage"
+	"storage", "lamp"
 	}
 categories = {
 	"category"
 	}
 recipes = {
-	"recipe", "storage"
+	"recipe", "storage", "lamp"
 	}
 technologies = {
 	"technology"
