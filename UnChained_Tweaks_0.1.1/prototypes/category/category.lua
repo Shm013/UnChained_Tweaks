@@ -84,5 +84,11 @@ data:extend({
 		name = "UT-battery-engine-stick",
 		group = "bob-fluid-products",
 		order = "a-c",
+    },
+	{
+		type = "item-subgroup",
+		name = "illumination",
+		group = "logistics",
+		order = "k-l",
     },	
  })

@@ -34,7 +34,7 @@ ent.picture_on =
       frame_count = 1,
       axially_symmetrical = false,
       direction_count = 1,
-      shift = {0.12, -0.26}
+      shift = {0.12, -0.16}
     }
 data:extend({ent})
 
