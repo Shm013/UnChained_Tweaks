@@ -217,6 +217,16 @@ data.raw["item-with-entity-data"]["bob-armoured-diesel-locomotive"].order = "e"
 data.raw["item-with-entity-data"]["bob-armoured-diesel-locomotive-2"].subgroup = "UT-trains"
 data.raw["item-with-entity-data"]["bob-armoured-diesel-locomotive-2"].order = "f"
 
+data.raw["technology"]["angels-crawler-train"].prerequisites = {
+	"angels-crawler",
+	"automated-rail-transportation",
+}
+data.raw["technology"]["bob-railway-2"].prerequisites = {
+--      "railway",
+      "advanced-electronics",
+      "automated-rail-transportation",
+}
+
 -- Wagons
 
 data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "UT-wagons"
