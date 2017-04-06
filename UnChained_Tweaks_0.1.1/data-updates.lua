@@ -278,5 +278,8 @@ data.raw.item["hazard-concrete"].order = "c"
 data.raw.item["landfill"].subgroup = "UT-floors"
 data.raw.item["landfill"].order = "d"
 
+data.raw.item["small-lamp"].subgroup = "illumination"
+data.raw.item["small-lamp"].order = "a"
+
 data.raw.item["offshore-pump"].subgroup = util.table.deepcopy(data.raw["item"]["small-pump"].subgroup)
 -- data.raw.item["offshore-pump"].order = "b[pipe]-c[small-pump]"

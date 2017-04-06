@@ -88,7 +88,7 @@ data:extend({
 	{
 		type = "item-subgroup",
 		name = "illumination",
-		group = "logistics",
-		order = "k-l",
+		group = "production",
+		order = "a-b",
     },	
  })
