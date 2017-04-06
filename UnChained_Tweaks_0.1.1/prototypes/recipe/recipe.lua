@@ -4,16 +4,17 @@ require("libs.recipe-functions")
 
 -- Angels logistic:
 data.raw["recipe"]["crawler-wagon"].ingredients = {
-		{"steel-plate", 100},
-		{"iron-plate", 60},
-		{"iron-gear-wheel", 50},
-		{"electronic-circuit", 60},
+		{"cargo-wagon", 1},
+		{"steel-plate", 30},
+		{"iron-gear-wheel", 24},
+		{"electronic-circuit", 20},
 }
 
 data.raw["recipe"]["crawler-bot-wagon"].ingredients = {
-		{"steel-plate", 120},
-		{"iron-plate", 60},
-		{"iron-gear-wheel", 50},
+		{"crawler-wagon", 1},
+		{"steel-bearing", 32},
+		{"steel-gear-wheel", 48},
+		{"invar-alloy", 80},
 		{"electronic-circuit", 120},
 }
 
@@ -22,6 +23,8 @@ data.raw["recipe"]["angels-crawler"].ingredients = {
 		{"steel-plate", 200},
 		{"electronic-circuit", 120},
 		{"iron-gear-wheel", 75},
+		{"invar-alloy", 120},
+		{"steel-bearing", 32},
 }
 
 -- Solar panels:
