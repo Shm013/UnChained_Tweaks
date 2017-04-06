@@ -27,6 +27,7 @@ data.raw["recipe"]["angels-crawler"].ingredients = {
 		{"steel-bearing", 32},
 }
 
+
 -- Solar panels:
 UTweaks.remove_ingredient("solar-panel", "copper-plate")
 UTweaks.addtorecipe("solar-panel", {{"silicon-wafer", 14}})

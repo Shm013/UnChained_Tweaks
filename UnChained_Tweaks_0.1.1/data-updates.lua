@@ -32,6 +32,7 @@ if data.raw["cargo-wagon"]["bob-cargo-wagon-3"] then data.raw["cargo-wagon"]["bo
 if data.raw["car"]["angels-crawler"] then data.raw["car"]["angels-crawler"].inventory_size = crawler_size end
 if data.raw["cargo-wagon"]["crawler-wagon"] then data.raw["cargo-wagon"]["crawler-wagon"].inventory_size = crawler_wagon_size  end
 if data.raw["cargo-wagon"]["crawler-bot-wagon"] then data.raw["cargo-wagon"]["crawler-bot-wagon"].inventory_size = crawler_bot_wagon_size end
+
 -- }}
 
 --{{ Energy capacity tweaks

@@ -22,7 +22,8 @@
     "boblogistics >= 0.14.5",
     "bobplates >= 0.14.0",
 	"bobpower >= 0.14.0",
-    "angelsrefining >=0.6.5",
-	"More_Floors >=1.1.0"
+    "angelsrefining >= 0.6.5",
+	"More_Floors >= 1.1.0",
+	"ShinyBob >= 0.14.9"
     ]
 }
