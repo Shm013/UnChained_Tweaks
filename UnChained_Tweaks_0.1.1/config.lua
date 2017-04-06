@@ -39,10 +39,9 @@ warehouse_size_MK12        = 600
 
 
 --{{ Trains:
-cargo_wagon_size     		= 16 -- 40 in vanila
-cargo_wagon_size_MK2 		= 32 -- 60 in bob
-cargo_wagon_size_MK3 		= 64 -- 80 in bob
-
+cargo_wagon_size     		= 20 -- 40 in vanila
+cargo_wagon_size_MK2 		= 40 -- 60 in bob
+cargo_wagon_size_MK3 		= 100 -- 80 in bob
 
 crawler_size                = 70 -- 768 in angel
 crawler_wagon_size          = 46 -- 64 in angel
