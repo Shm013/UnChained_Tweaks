@@ -6,6 +6,15 @@ require ("libs.recipe-functions") -- From Bob's Libary
 require ("libs.technology-functions") -- From Bob's Libary 
 require ("libs.functions") -- From Bob's Libary 
 
+recipes = {
+	"recipe",
+	}
+
+for k,v in pairs(recipes) do
+	require("prototypes" .. ".recipe." .. v .. "-updates")
+end
+	
+
 if data.raw["player"]["player"].inventory_size ~= unchained_inventory_size then data.raw["player"]["player"].inventory_size = unchained_inventory_size end
 
 --{{ Storage tweaks
@@ -226,6 +235,7 @@ data.raw["technology"]["bob-railway-2"].prerequisites = {
       "advanced-electronics",
       "automated-rail-transportation",
 }
+
 
 -- Wagons
 
