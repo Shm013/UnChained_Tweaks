@@ -52,8 +52,13 @@ if data.raw["item"]["fuel-cell"] then data.raw["item"]["fuel-cell"].fuel_value =
 
 -- random
 
-data.raw["item"]["fluorite"].stack_size = 200
+--{{ Stack size:
+
+data.raw["item"]["fluorite"].stack_size    = 200
 data.raw["item"]["uranium-ore"].stack_size = 200
+data.raw["item"]["sulfur"].stack_size      = 200
+
+--}}
 
 if data.raw["car"]["car"] then data.raw["car"]["car"].equipment_grid = "UT-car" end
 data.raw.recipe["coal-burner"].enabled = false
