@@ -30,3 +30,9 @@ end
 if data.raw["technology"]["bob-armoured-railway-2"] then
 	data.raw["technology"]["bob-armoured-railway-2"].enabled = false
 end
+
+--{{ Players invenory size
+
+data.raw["player"]["player"].inventory_size = player_inventory_size
+
+--}}
