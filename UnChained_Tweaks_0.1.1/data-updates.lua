@@ -57,6 +57,7 @@ if data.raw["item"]["fuel-cell"] then data.raw["item"]["fuel-cell"].fuel_value =
 data.raw["item"]["fluorite"].stack_size    = 200
 data.raw["item"]["uranium-ore"].stack_size = 200
 data.raw["item"]["sulfur"].stack_size      = 200
+data.raw["item"]["plastic-bar"].stack_size = 200
 
 --}}
 
