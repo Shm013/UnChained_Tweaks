@@ -1,8 +1,6 @@
 -- local UNC = UNC_Config
 Mod_Name = "__UnChained_Tweaks__"
 
-unchained_inventory_size	= 40
-
 --{{ Storage:
 -- HardStorage tweaks
 wooden_chest_size			= 10
@@ -37,6 +35,11 @@ warehouse_size_MK11        = 500
 warehouse_size_MK12        = 600
 --}}
 
+--{{ Player inventory size:
+
+player_inventory_size = 40
+
+--}}
 
 --{{ Trains:
 cargo_wagon_size     		= 20 -- 40 in vanila

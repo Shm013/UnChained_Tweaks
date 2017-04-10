@@ -14,9 +14,6 @@ for k,v in pairs(recipes) do
 	require("prototypes" .. ".recipe." .. v .. "-updates")
 end
 	
-
-if data.raw["player"]["player"].inventory_size ~= unchained_inventory_size then data.raw["player"]["player"].inventory_size = unchained_inventory_size end
-
 --{{ Storage tweaks
 
 if data.raw["container"]["wooden-chest"] then data.raw["container"]["wooden-chest"].inventory_size = wooden_chest_size end
