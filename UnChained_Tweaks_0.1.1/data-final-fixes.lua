@@ -36,3 +36,11 @@ end
 data.raw["player"]["player"].inventory_size = player_inventory_size
 
 --}}
+
+--{{ More flors (ShinyBob undo)
+
+for _, item in pairs(data.raw.item) do
+    if item.place_as_tile then
+      item.stack_size = 1000
+    end
+  end
