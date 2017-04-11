@@ -13,6 +13,15 @@ recipes = {
 for k,v in pairs(recipes) do
 	require("prototypes" .. ".recipe." .. v .. "-updates")
 end
+
+--{{ StickyNote
+data.raw["container"]["sticky-note"].picture.filename = Mod_Name .. "/graphics/entity/sticky-note/sticky-note.png"
+data.raw["item"]["sticky-note"].icon = Mod_Name .. "/graphics/icons/sticky-note.png"
+
+data.raw["container"]["sticky-sign"].picture.filename = Mod_Name .. "/graphics/entity/sign/sign.png"
+data.raw["item"]["sticky-sign"].icon = Mod_Name .. "/graphics/icons/sign.png"
+--}}
+
 	
 --{{ Storage tweaks
 
