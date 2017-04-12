@@ -7,6 +7,30 @@ data:extend({
 	},
 	{
 		type = "item-subgroup",
+		name = "UT-logistic-provider",
+		group = "logistics",
+		order = "a[subgroup]-b[storage]",
+	},
+	{
+		type = "item-subgroup",
+		name = "UT-logistic-requester",
+		group = "logistics",
+		order = "a[subgroup]-b[storage]",
+	},
+	{
+		type = "item-subgroup",
+		name = "UT-logistic-storage",
+		group = "logistics",
+		order = "a[subgroup]-b[storage]",
+	},
+	{
+		type = "item-subgroup",
+		name = "UT-logistic-active-provider",
+		group = "logistics",
+		order = "a[subgroup]-b[storage]",
+	},
+	{
+		type = "item-subgroup",
 		name = "UT-wood-and-seeding",
 		group = "bob-resource-products",
 		order = "a-a",

@@ -100,15 +100,26 @@ if data.raw["item-subgroup"]["bob-ammo"] then data.raw["item-subgroup"]["bob-amm
 
 -- Angels warehouses tweaks
 
+data.raw["technology"]["angels-logistic-warehouses"].icon = Mod_Name .. "/graphics/technology/logistic-warehouses.png"
+
 if data.raw["container"]["angels-warehouse"] then data.raw["container"]["angels-warehouse"].inventory_size = warehouse_size_MK01 end
+data.raw["logistic-container"]["angels-warehouse-passive-provider"].inventory_size = warehouse_size_MK01
+data.raw["logistic-container"]["angels-warehouse-storage"].inventory_size = warehouse_size_MK01
+data.raw["logistic-container"]["angels-warehouse-requester"].inventory_size = warehouse_size_MK01
+data.raw["logistic-container"]["angels-warehouse-active-provider"].inventory_size = warehouse_size_MK01
 UTweaks.resort("recipe", "angels-warehouse", "UT-repositories", "a")
+UTweaks.resort("recipe", "angels-warehouse-passive-provider", "UT-logistic-provider", "a")
+UTweaks.resort("recipe", "angels-warehouse-requester", "UT-logistic-requester", "a")
+UTweaks.resort("recipe", "angels-warehouse-storage", "UT-logistic-storage", "a")
+UTweaks.resort("recipe", "angels-warehouse-active-provider", "UT-logistic-active-provider", "a")
+
+data.raw["technology"]["angels-logistic-warehouses"].prerequisites = { "logistic-system" }
+
 
 -- if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].subgroup = "UT-repositories" end
 -- if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].order = "a" end
 -- data.raw["container"]["angels-warehouse"].name = warehouse_MK01
 -- data.raw["recipe"]["angels-warehouse"].name = warehouse_MK01
-
-data.raw.technology["angels-logistic-warehouses"].enabled = false
 
 -- Angels Components
 data.raw.item["angels-burner-generator-vequip"].subgroup = "UT-vehicle-modules"

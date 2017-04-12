@@ -66,3 +66,4 @@ if data.raw["technology"]["bi-coal-processing-2"] then
 	}
 end
 --}}
+
