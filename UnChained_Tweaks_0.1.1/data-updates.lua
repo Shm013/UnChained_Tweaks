@@ -50,12 +50,6 @@ if data.raw["cargo-wagon"]["crawler-bot-wagon"] then data.raw["cargo-wagon"]["cr
 
 -- }}
 
---{{ Energy capacity:
-
-if data.raw["item"]["fuel-cell"] then data.raw["item"]["fuel-cell"].fuel_value = fuel_cell_energy_value end
-
---}}
-
 -- random
 
 --{{ Stack size:

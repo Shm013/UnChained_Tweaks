@@ -28,7 +28,7 @@ data.raw["recipe"]["angels-crawler"].ingredients = {
 }
 
 
--- Solar panels:
+--{{ Solar panels:
 UTweaks.remove_ingredient("solar-panel", "copper-plate")
 UTweaks.addtorecipe("solar-panel", {{"silicon-wafer", 14}})
 
@@ -41,13 +41,28 @@ UTweaks.addtorecipe("solar-panel-large", {{"silicon-wafer", 28}})
 UTweaks.addtorecipe("vehicle-solar-panel-1", {{"silicon-wafer", 14}})
 UTweaks.addtorecipe("solar-panel-equipment", {{"silicon-wafer", 4}})
 
--- Wind Turbine:
+--}}
+
+--{{ Wind Turbine:
 data.raw["recipe"]["wind-turbine-2"].ingredients =     
 {
 	{"iron-plate", 36},
 	{"iron-gear-wheel", 8},
 	{"basic-circuit-board", 5},		
 }
+--}}
 
+--{{ Charcoal:
+data.raw["recipe"]["bi-charcoal"].result_count = 6
+data.raw["recipe"]["bi-charcoal-2"].result_count = 15
 
--- }}
+if data.raw["technology"]["bi-coal-processing-2"] then
+	data.raw["recipe"]["bi-coke-coal"].enabled = false
+	data.raw["technology"]["bi-coal-processing-2"].effects = {
+		{
+			type = "unlock-recipe",
+			recipe = "bi-coal"
+		}
+	}
+end
+--}}
