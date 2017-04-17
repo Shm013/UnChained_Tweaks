@@ -60,6 +60,6 @@ charcoal_energy_value 		= "5MJ"     -- 6
 pellet_coke_energy_value 	= "20MJ"   	-- 24
 cellulose_fiber_energy_value= "0.5MJ" 	-- 1
 wood_pellets_energy_value   = "4MJ"     -- 12
-wood_bricks_energy_value    = "8MJ"     -- 25
+wood_bricks_energy_value    = "10MJ"     -- 25
 
 --}}
