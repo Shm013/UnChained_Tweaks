@@ -9,6 +9,7 @@
   "description": "Adds tweaks for some mods, change recipes, techs. Additional balance for marathon and bob's extended. More integration for mods.",
   "dependencies": [
     "base >= 0.14.0",
+	"bobsangelthon >= 0.1.11",
     "angelsaddons-warehouses >= 0.1.3",
     "boblibrary >= 0.14.3",
     "VersepellesHardStorage >= 2.0.0",

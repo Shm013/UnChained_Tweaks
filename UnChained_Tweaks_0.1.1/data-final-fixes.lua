@@ -84,3 +84,46 @@ data.raw["recipe"]["angels-warehouse-active-provider"].ingredients ={
 	{"advanced-circuit", 25},
 }
 --}}
+
+--{{ Sorting recipes:
+
+-- Saphirite chunks:
+data.raw["recipe"]["angelsore1-chunk-processing"].results = {
+	{"slag", 4},
+	{"iron-ore", 8},
+	{"copper-ore", 2},
+	{"quartz", 4},
+	{"nickel-ore", 2}
+}
+
+-- Jivolite chunks:
+data.raw["recipe"]["angelsore2-chunk-processing"].results = {
+	{"slag", 4},
+	{"iron-ore", 8},
+	{"copper-ore", 1},
+	{"bauxite-ore", 1},
+	{"zinc-ore", 4},
+	{"uraninite", 1}
+}
+
+-- Crotinnium chunks:
+data.raw["recipe"]["angelsore4-chunk-processing"].results = {
+	{"slag", 4},
+	{"copper-ore", 8},
+	{"iron-ore", 2},
+	{"lead-ore", 2},
+	{"silver-ore", 4},
+	{"fluorite", 2}
+}
+
+-- Rubyte chunks:
+data.raw["recipe"]["angelsore5-chunk-processing"].results = {
+	{"slag", 4},
+	{"lead-ore", 2},
+	{"nickel-ore", 1},
+	{"bauxite-ore", 4},
+	{"gold-ore", 4},
+	{"uraninite", 1}
+}
+
+--}}
