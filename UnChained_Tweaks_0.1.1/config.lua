@@ -57,9 +57,10 @@ fuel_cell_energy_value 		= "18MJ" 	-- "45MJ" in usefulbyproducts
 seedling_energy_value 		= "0.5MJ" 	-- 1
 woodpulp_energy_value 		= "0.5MJ" 	-- 2
 charcoal_energy_value 		= "5MJ"     -- 6
-pellet_coke_energy_value 	= "20MJ"   	-- 24
+pellet_coke_energy_value 	= "26MJ"   	-- 24
 cellulose_fiber_energy_value= "0.5MJ" 	-- 1
 wood_pellets_energy_value   = "4MJ"     -- 12
-wood_bricks_energy_value    = "10MJ"     -- 25
+wood_bricks_energy_value    = "10MJ"    -- 25
+solid_fuel_energy_value     = "12MJ"    -- 10
 
 --}}

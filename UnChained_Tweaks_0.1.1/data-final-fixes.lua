@@ -58,6 +58,7 @@ if data.raw["item"]["pellet-coke"] then data.raw["item"]["pellet-coke"].fuel_val
 if data.raw["item"]["cellulose-fiber"] then data.raw["item"]["cellulose-fiber"].fuel_value = cellulose_fiber_energy_value end
 if data.raw["item"]["wood-pellets"] then data.raw["item"]["wood-pellets"].fuel_value = wood_pellets_energy_value end
 if data.raw["item"]["wood-bricks"] then data.raw["item"]["wood-bricks"].fuel_value = wood_bricks_energy_value end
+if data.raw["item"]["solid-fuel"] then data.raw["item"]["solid-fuel"].fuel_value = solid_fuel_energy_value end
 --}}
 
 --{{ Logistic warehouses
@@ -125,5 +126,11 @@ data.raw["recipe"]["angelsore5-chunk-processing"].results = {
 	{"gold-ore", 4},
 	{"uraninite", 1}
 }
+
+--}}
+
+--{{ Disable alchemy
+
+data.raw.technology["electrolysis-2"].effects = {}
 
 --}}
