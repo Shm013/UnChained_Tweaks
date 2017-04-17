@@ -43,3 +43,6 @@ data.raw["technology"]["angels-coal-processing-2"].effects = {
         recipe = "solid-coke-sulfur"
       },
 }
+
+-- Reduce asphalt cost
+data.raw["technology"]["Arci-asphalt"].unit.count = 200
