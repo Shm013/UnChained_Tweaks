@@ -9,9 +9,17 @@ require ("libs.functions") -- From Bob's Libary
 recipes = {
 	"recipe",
 	}
+	
+technologies = {
+	"technology"
+	}
 
 for k,v in pairs(recipes) do
 	require("prototypes" .. ".recipe." .. v .. "-updates")
+end
+
+for k,v in pairs(technologies) do
+	require("prototypes" .. ".technology." .. v .. "-updates")
 end
 
 --{{ StickyNote
