@@ -31,3 +31,15 @@ table.insert(tec, {
         type = "unlock-recipe",
         recipe = "uranium-convertation-2"
 })
+
+-- Remove pellet-coke
+data.raw["technology"]["angels-coal-processing-2"].effects = {
+	  {
+        type = "unlock-recipe",
+        recipe = "carbon-separation-1"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "solid-coke-sulfur"
+      },
+}

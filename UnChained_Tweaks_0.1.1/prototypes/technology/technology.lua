@@ -275,5 +275,31 @@ data:extend({
 			time = 30
 		},
 	},    	
-    order = "c-b"
+	
+	-- Coal Processing 3:
+	{
+		type = "technology",
+		name = "ut-coal-processing-3",
+		icon = "__angelspetrochem__/graphics/technology/coal-tech.png",
+		icon_size = 128,
+		prerequisites = 
+		{
+			"angels-coal-processing-2",
+		},
+		effects =
+		{
+			{ type = "unlock-recipe", recipe = "pellet-coke" },
+		},
+		unit =
+		{
+			count = 50,
+			ingredients = {
+				{"science-pack-1", 1},
+			{"science-pack-2", 1},
+			{"science-pack-3", 1},
+			},
+			time = 15
+		},
+		order = "c-a"
+    },
 })
