@@ -93,8 +93,8 @@ data.raw["recipe"]["angelsore1-chunk-processing"].results = {
 	{"slag", 4},
 	{"iron-ore", 8},
 	{"copper-ore", 2},
-	{"quartz", 4},
-	{"nickel-ore", 2}
+	{"quartz", 1},
+	{"nickel-ore", 4}
 }
 
 -- Jivolite chunks:
