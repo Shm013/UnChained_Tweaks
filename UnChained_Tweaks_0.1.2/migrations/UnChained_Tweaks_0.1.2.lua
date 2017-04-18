@@ -42,4 +42,6 @@ for index, force in pairs(game.forces) do
 	if force.technologies["angels-coal-processing-2"] then
 		force.recipes["pellet-coke"].enabled = false
 	end
+	
+	force.technologies['angels-logistic-warehouses'].enabled = true
 end
