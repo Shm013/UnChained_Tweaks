@@ -10,14 +10,13 @@ for index, force in pairs(game.forces) do
 	force.reset_recipes()
 	force.reset_technologies()
 	
-	if technologies["bob-armoured-railway"].researched then
-		force.recipes["bob-armoured-diesel-locomotive"].enabled = false
-		force.recipes["bob-armoured-cargo-wagon"].enabled = false
-	end
-	if force.technologies["bob-armoured-railway-2"].researched then
-		force.recipes["bob-armoured-diesel-locomotive-2"].enabled = false
-		force.recipes["bob-armoured-cargo-wagon-2"].enabled = false
-	end
+	technologies["bob-armoured-railway"].enabled = false
+	force.recipes["bob-armoured-diesel-locomotive"].enabled = false
+	force.recipes["bob-armoured-cargo-wagon"].enabled = false
+	force.technologies["bob-armoured-railway-2"].enabled = false
+	force.recipes["bob-armoured-diesel-locomotive-2"].enabled = false
+	force.recipes["bob-armoured-cargo-wagon-2"].enabled = false
+	
 	if force.technologies["bi-coal-processing-2"] then
 		force.recipes["bi-coke-coal"].enabled = false
 	end
