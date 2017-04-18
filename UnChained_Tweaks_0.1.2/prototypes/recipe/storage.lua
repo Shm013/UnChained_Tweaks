@@ -128,3 +128,133 @@ UTweaks.addtorecipe("warehouse-MK02", {{"angels-warehouse", 1}})
 for k = 3, 9 do
 	UTweaks.addtorecipe(tostring("warehouse-MK0"..k), {{tostring("warehouse-MK0"..k-1), 1}})	
 end
+
+-- Logistic warehouse:
+
+data:extend({
+	{
+		type = "recipe",
+		name = "warehouse-passive-provider-MK2",
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"angels-warehouse-passive-provider", 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-passive-provider-MK2",
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-passive-provider.png",
+		subgroup = "UT-logistic-provider",
+    },
+	{
+		type = "recipe",
+		name = "warehouse-active-provider-MK2",
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"angels-warehouse-active-provider", 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-active-provider-MK2",
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-active-provider.png",
+		subgroup = "UT-logistic-active-provider",
+    },
+	{
+		type = "recipe",
+		name = "warehouse-storage-MK2",
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"angels-warehouse-storage", 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-storage-MK2",
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-storage.png",
+		subgroup = "UT-logistic-storage",
+	},
+	{
+		type = "recipe",
+		name = "warehouse-requester-MK2",
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"angels-warehouse-requester", 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-requester-MK2",
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-requester.png",
+		subgroup = "UT-logistic-requester",
+    }
+})
+
+for t = 3, 9 do
+	data:extend({
+	{
+		type = "recipe",
+		name = "warehouse-passive-provider-MK" .. t,
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"warehouse-passive-provider-MK" .. t-1, 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-passive-provider-MK" .. t,
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-passive-provider.png",
+		subgroup = "UT-logistic-provider",
+    },
+	{
+		type = "recipe",
+		name = "warehouse-active-provider-MK" .. t,
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"warehouse-active-provider-MK" .. t-1, 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-active-provider-MK" .. t,
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-active-provider.png",
+		subgroup = "UT-logistic-active-provider",
+    },
+	{
+		type = "recipe",
+		name = "warehouse-storage-MK" .. t,
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"warehouse-storage-MK" .. t-1, 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-storage-MK" .. t,
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-storage.png",
+		subgroup = "UT-logistic-storage",
+	},
+	{
+		type = "recipe",
+		name = "warehouse-requester-MK" .. t,
+		energy_required = 10,
+		enabled = "false",
+		ingredients ={
+			{"steel-plate", 100},
+			{"stone-brick", 100},
+			{"warehouse-requester-MK" .. t-1, 1},
+			{"advanced-circuit", 25},
+		},
+		result= "warehouse-requester-MK" .. t,
+		icon = "__angelsaddons-warehouses__/graphics/icons/warehouse-requester.png",
+		subgroup = "UT-logistic-requester",
+    },
+})
+end

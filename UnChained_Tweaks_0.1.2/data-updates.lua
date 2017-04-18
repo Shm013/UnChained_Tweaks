@@ -121,7 +121,13 @@ UTweaks.resort("recipe", "angels-warehouse-requester", "UT-logistic-requester", 
 UTweaks.resort("recipe", "angels-warehouse-storage", "UT-logistic-storage", "a")
 UTweaks.resort("recipe", "angels-warehouse-active-provider", "UT-logistic-active-provider", "a")
 
+data.raw["logistic-container"]["angels-warehouse-passive-provider"].fast_replaceable_group = "angels-warehouse-passive-provider"
+data.raw["logistic-container"]["angels-warehouse-storage"].fast_replaceable_group = "angels-warehouse-storage"
+data.raw["logistic-container"]["angels-warehouse-requester"].fast_replaceable_group = "angels-warehouse-requester"
+data.raw["logistic-container"]["angels-warehouse-active-provider"].fast_replaceable_group = "angels-warehouse-active-provider"
+
 data.raw["technology"]["angels-logistic-warehouses"].prerequisites = { "logistic-system" }
+data.raw["technology"]["angels-logistic-warehouses"].unit.count = 300/6
 
 
 -- if data.raw["recipe"]["angels-warehouse"] then data.raw["recipe"]["angels-warehouse"].subgroup = "UT-repositories" end

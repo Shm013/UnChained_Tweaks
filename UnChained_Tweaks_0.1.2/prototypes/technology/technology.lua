@@ -303,3 +303,84 @@ data:extend({
 		order = "c-a"
     },
 })
+
+
+-- Logistic warehouse:
+
+data:extend({
+	{
+		type = "technology",
+		name = "logistic-warehouses-2",
+		upgrade = "true",
+		icon_size = 128,
+		icon = Mod_Name .. "/graphics/technology/logistic-warehouses.png",
+		prerequisites = 
+		{
+			"angels-logistic-warehouses",
+		},
+		effects =
+		{
+			{ type = "unlock-recipe", recipe = "warehouse-passive-provider-MK2"},
+			{ type = "unlock-recipe", recipe = "warehouse-active-provider-MK2"},
+			{ type = "unlock-recipe", recipe = "warehouse-storage-MK2"},
+			{ type = "unlock-recipe", recipe = "warehouse-requester-MK2"},
+		},
+		unit =
+		{
+			count = 400/6,
+			ingredients = {
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},
+			time = 15
+		},
+    },
+})
+
+
+tec_cost = {700, 1000, 1200, 1500, 1800, 2000, 2400}
+
+for t = 3, 9 do
+	tec = {
+		type = "technology",
+		name = "logistic-warehouses-" .. t,
+		upgrade = "true",
+		icon_size = 128,
+		icon = Mod_Name .. "/graphics/technology/logistic-warehouses.png",
+		prerequisites = 
+		{
+			"logistic-warehouses-" .. t-1,
+		},
+		effects =
+		{
+			{ type = "unlock-recipe", recipe = "warehouse-passive-provider-MK" .. t },
+			{ type = "unlock-recipe", recipe = "warehouse-active-provider-MK" .. t },
+			{ type = "unlock-recipe", recipe = "warehouse-storage-MK" .. t },
+			{ type = "unlock-recipe", recipe = "warehouse-requester-MK" .. t },
+		},
+		unit = 
+		{
+			count = tec_cost[t-2]/6,
+			time = 15 + (t-2)*5
+		}
+	}
+	
+	if t < 8 then
+		tec.unit.ingredients = {
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+		}
+	else
+		tec.unit.ingredients = {
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"science-pack-4", 1},
+		}
+	end
+	
+	data:extend({tec})
+	
+end

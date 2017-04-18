@@ -91,3 +91,38 @@ ent.name = name
 ent.minable.result = name
 ent.inventory_size = warehouse_size_MK09
 data:extend({ent})
+
+
+-- Logistic warehouse:
+
+for t = 2, 9 do
+	
+	ent = util.table.deepcopy(data.raw["logistic-container"]["angels-warehouse-passive-provider"])
+	ent.name = "warehouse-passive-provider-MK" .. t
+	ent.inventory_size = data.raw["container"]["warehouse-MK0" .. t].inventory_size
+	ent.fast_replaceable_group = "angels-warehouse-passive-provider"
+	ent.minable.result = ent.name
+	
+	data:extend({ent})
+	
+	ent = util.table.deepcopy(data.raw["logistic-container"]["angels-warehouse-active-provider"])
+	ent.name = "warehouse-active-provider-MK" .. t
+	ent.inventory_size = data.raw["container"]["warehouse-MK0" .. t].inventory_size
+	ent.fast_replaceable_group = "angels-warehouse-active-provider"
+	ent.minable.result = ent.name
+	data:extend({ent})
+	
+	ent = util.table.deepcopy(data.raw["logistic-container"]["angels-warehouse-storage"])
+	ent.name = "warehouse-storage-MK" .. t
+	ent.inventory_size = data.raw["container"]["warehouse-MK0" .. t].inventory_size
+	ent.fast_replaceable_group = "angels-warehouse-storage"
+	ent.minable.result = ent.name
+	data:extend({ent})
+	
+	ent = util.table.deepcopy(data.raw["logistic-container"]["angels-warehouse-requester"])
+	ent.name = "warehouse-requester-MK" .. t
+	ent.inventory_size = data.raw["container"]["warehouse-MK0" .. t].inventory_size
+	ent.fast_replaceable_group = "angels-warehouse-requester"
+	ent.minable.result = ent.name
+	data:extend({ent})
+end

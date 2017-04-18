@@ -80,3 +80,28 @@ item.name = name
 item.place_result = name
 item.order = "i"
 data:extend({item})
+
+-- Logistic warehouse:
+
+for t = 2, 9 do
+	
+	item = util.table.deepcopy(data.raw["item"]["angels-warehouse-passive-provider"])
+	item.name = "warehouse-passive-provider-MK" .. t
+	item.place_result = item.name
+	data:extend({item})
+	
+	item = util.table.deepcopy(data.raw["item"]["angels-warehouse-active-provider"])
+	item.name = "warehouse-active-provider-MK" .. t
+	item.place_result = item.name
+	data:extend({item})
+	
+	item = util.table.deepcopy(data.raw["item"]["angels-warehouse-storage"])
+	item.name = "warehouse-storage-MK" .. t
+	item.place_result = item.name
+	data:extend({item})
+	
+	item = util.table.deepcopy(data.raw["item"]["angels-warehouse-requester"])
+	item.name = "warehouse-requester-MK" .. t
+	item.place_result = item.name
+	data:extend({item})
+end
