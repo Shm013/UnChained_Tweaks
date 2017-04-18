@@ -24,7 +24,7 @@
     "bobassembly >= 0.14.0",
     "bobconfig >= 0.14.0",
     "bobelectronics >= 0.14.0",
-    "bobelectronics >= gfxtweak_0.14.0",
+    "bobelectronics_gfxtweak >= 0.14.0",
     "bobenemies >= 0.14.0",
     "BobExtended >= 0.14.29",
     "bobgreenhouse >= 0.14.0",
