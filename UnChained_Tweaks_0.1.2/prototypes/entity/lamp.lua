@@ -44,7 +44,7 @@ ent = util.table.deepcopy(data.raw["lamp"]["small-lamp"])
 ent.name = name
 ent.minable.result = "small-lamp-mk2"
 ent.max_health = 75
-ent.energy_usage_per_tick = "10KW"
+ent.energy_usage_per_tick = "15KW"
 ent.light = {intensity = 0.9, size = 60}
 ent.picture_off.filename = Mod_Name .. "/graphics/entity/" .. name .. "/light-off.png"
 data:extend({ent})
@@ -55,7 +55,7 @@ ent = util.table.deepcopy(data.raw["lamp"]["medium-lamp"])
 ent.name = name
 ent.minable.result = "medium-lamp-mk2"
 ent.max_health = 110
-ent.energy_usage_per_tick = "15KW"
+ent.energy_usage_per_tick = "20KW"
 ent.light = {intensity = 0.9, size = 100}
 ent.picture_off.filename = Mod_Name .. "/graphics/entity/" .. name .. "/light-off.png"
 data:extend({ent})
