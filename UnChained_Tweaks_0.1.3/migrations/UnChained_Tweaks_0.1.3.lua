@@ -26,4 +26,12 @@ for index, force in pairs(game.forces) do
 		force.recipes["uranium-bullet-magazine"].enabled = false
 		force.recipes["uranium-cannon-shell"].enabled = false
 	end
+	
+	if force.technologies["to-slag-4"].researched then
+		force.recipes["rutile-ore-to-slag"].enabled = true
+		force.recipes["tungsten-ore-to-slag"].enabled = true
+		force.recipes["uraninite-to-slag"].enabled = true
+		force.recipes["uranium-ore-to-slag"].enabled = true
+		force.recipes["fluorite-to-slag"].enabled = true
+	end
 end

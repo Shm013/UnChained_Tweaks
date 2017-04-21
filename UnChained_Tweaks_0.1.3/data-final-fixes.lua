@@ -1,5 +1,34 @@
 require("config")
 
+--{{ Reverse to slag 4:
+
+
+data.raw["technology"]["to-slag-4"].effects =
+{
+	{
+		type = "unlock-recipe",
+		recipe = "rutile-ore-to-slag",
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "tungsten-ore-to-slag",
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "uraninite-to-slag",
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "uranium-ore-to-slag",
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "fluorite-to-slag",
+	},
+}
+
+--}}
+
 -- Chests recepies:
 
 data.raw.recipe["titanium-chest"].ingredients = {  

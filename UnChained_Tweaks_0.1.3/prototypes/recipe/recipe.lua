@@ -33,3 +33,27 @@ data:extend({
 		result_count = 10,
 	},
 })
+
+-- Reverce ore:
+local order = 90
+
+local function oreToSlag(ore, amount)
+	if amount == nil then amount = 1 end
+	data:extend({
+		{ type = "recipe",
+		name = ore.."-to-slag",
+		--icon = "__BobExtended__/graphics/slag-" .. ore .. ".png",
+		category = "mixing-furnace",
+		enabled = false,
+		subgroup = "slag-processing",
+		order = "z-".. string.char(order),
+		ingredients ={{ore, amount}},
+		result = "slag",
+		}
+	})
+	order = order + 1
+end
+
+oreToSlag("uraninite")
+oreToSlag("uranium-ore")
+oreToSlag("fluorite")
