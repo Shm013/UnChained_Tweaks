@@ -40,11 +40,81 @@ data.raw["player"]["player"].inventory_size = player_inventory_size
 
 --}}
 
---{{ More flors (ShinyBob undo):
-for _, item in pairs(data.raw.item) do
-    if item.place_as_tile then
-      item.stack_size = 1000
-    end
+--{{ MoreFlors & Asphalt stack size:
+
+flors = {
+	"smooth-concrete",
+	"experiment",
+	"checkerboard",
+	"wood-floor",
+	"herringbone",
+	"darkwood",
+	"reinforced-concrete",
+	"decal1",
+	"mf-concrete-red",
+	"mf-concrete-blue",
+	"mf-concrete-gold",
+	"mf-concrete-green",
+	"mf-concrete-limegreen",
+	"mf-concrete-orange",
+	"mf-concrete-pink",
+	"mf-concrete-magenta",
+	"mf-concrete-purple",
+	"mf-concrete-skyblue",
+	"mf-concrete-white",
+	"mf-concrete-yellow",
+	"mf-concrete-orange",
+	"mf-concrete-black",
+	"mf-concrete-darkgrey",
+	"diamond-plate",
+	"rusty-metal",
+	"rusty-grate",
+	"arrow-grate",
+	"fast-arrow-grate",
+	"express-arrow-grate",
+	"mf_green_grass",
+	"mf_grass_dry",
+	"mf_green_grass_blueprint",
+	"mf_grass_dry_blueprint",
+	"mf_sand_light",
+	"sand_light_blueprint",
+	"sand_dark_blueprint",
+	"mf_sand_dark",
+	"mf_dirt",
+	"dirt_blueprint",
+	"dirt_dark_blueprint",
+	"mf_dirt_dark",
+	"gravel",
+	"circuit-floor",
+	"asphalt",
+	"road-line",
+	"cobblestone",
+	"redbrick",
+	"yellowbrick",
+	"lava",
+	"snow",
+	"alien-metal",
+	"metal-scraps",
+	"hexagonb",
+	"tar",
+	"Arci-asphalt",
+	"Arci-asphalt-hazard-white",
+	"Arci-asphalt-hazard-yellow",
+	"Arci-asphalt-hazard-red",
+	"Arci-asphalt-hazard-blue",
+	"Arci-asphalt-marking-white-straight",
+	"Arci-asphalt-marking-white-diagonal",
+	"Arci-asphalt-marking-white-corner-left",
+	"Arci-asphalt-marking-white-corner-right",
+	"Arci-asphalt-marking-yellow-straight",
+	"Arci-asphalt-marking-yellow-diagonal",
+	"Arci-asphalt-marking-yellow-corner-left",
+	"Arci-asphalt-marking-yellow-corner-right",
+	"Arci-asphalt-zebra-crossing"
+}
+
+for _, flor in pairs(flors) do
+      data.raw["item"][flor].stack_size = 1000
 end
 
 --}}
