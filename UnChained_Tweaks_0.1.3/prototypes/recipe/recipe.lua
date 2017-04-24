@@ -42,7 +42,7 @@ local function oreToSlag(ore, amount)
 	data:extend({
 		{ type = "recipe",
 		name = ore.."-to-slag",
-		--icon = "__BobExtended__/graphics/slag-" .. ore .. ".png",
+		icon = Mod_Name .. "/graphics/icons/slag-" .. ore .. ".png",
 		category = "mixing-furnace",
 		enabled = false,
 		subgroup = "slag-processing",
