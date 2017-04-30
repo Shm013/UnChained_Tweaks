@@ -1,3 +1,6 @@
+--Angelsmod functions:
+if not angelsmods then angelsmods = {} end
+
 --{{ List of prototypes here: 
 entities = {
 	"storage", "lamp"

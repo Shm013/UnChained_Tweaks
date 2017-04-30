@@ -37,4 +37,10 @@ for index, force in pairs(game.forces) do
 	
 	-- disable oil crude barrel from coal
 	force.recipes["get-oil"].enabled = false
+	
+	-- diesel barrel
+	if force.technologies["angels-fluid-barreling"].researched then
+		force.recipes["angels-fill-diesel-fuel-barrel"].enabled = true
+		force.recipes["angels-empty-diesel-fuel-barrel"].enabled = true
+	end
 end

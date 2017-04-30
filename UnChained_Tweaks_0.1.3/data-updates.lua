@@ -1,5 +1,8 @@
 require("config")
 
+--Angelsmod functions:
+if not angelsmods then angelsmods = {} end
+
 require ("libs.legacy") -- From Bob's Libary 
 require ("libs.item-functions") -- From Bob's Libary 
 require ("libs.recipe-functions") -- From Bob's Libary 
@@ -21,6 +24,9 @@ end
 for k,v in pairs(technologies) do
 	require("prototypes" .. ".technology." .. v .. "-updates")
 end
+
+-- Diesel barrel:
+angelsmods.functions.make_barrel("diesel-fuel", "carbons-2", "i", "chemical")	
 
 --{{ StickyNote
 data.raw["container"]["sticky-note"].picture.filename = Mod_Name .. "/graphics/entity/sticky-note/sticky-note.png"
