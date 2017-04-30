@@ -34,4 +34,7 @@ for index, force in pairs(game.forces) do
 		force.recipes["uranium-ore-to-slag"].enabled = true
 		force.recipes["fluorite-to-slag"].enabled = true
 	end
+	
+	-- disable oil crude barrel from coal
+	force.recipes["get-oil"].enabled = false
 end
